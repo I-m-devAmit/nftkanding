@@ -1,0 +1,55 @@
+<!-- Header Started -->
+<header>
+  <section class="container">
+    <nav class="nav">
+      <div class="navbar">
+        <img
+          src="../../assets/angular_solidBlack.svg"
+          alt="website logo"
+          width="100"
+          height="100"
+        />
+      </div>
+      <h1 style="margin-left:315px" ><span style="color:white">NFT</span> KART</h1>
+      <div class="navmenu">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a href="#"><i class="fa fa-fw fa-search"></i>Search</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+        <button class="btn"><i class="fa fa-fw fa-user"></i>Login</button>
+      </div>
+    </nav>
+  </section>
+</header>
+
+<section class="carditems">
+  <div class="container">
+    <div class="content">
+      <div class="heading">
+        <h2 style="margin-left:38px; padding: 25px;"><span style="color:white">Hottest</span> Collections</h2>
+        <p>
+          An NFT collection is an assortment of digital assets released by an
+          artist (or group of artists) containing a limited number of individual
+          NFTs. Typically, most NFT collections consist of numerous NFTs that
+          all conform to the same artistic style, with slight variations across
+          each individual token.
+        </p>
+      </div>
+
+      <div class="card">
+        <div *ngFor="let data of imageArray" class="photos">
+          <!--  -->
+          <img
+            [src]="data.imagePicture"
+            alt="website logo"
+            width="400"
+            height="400"
+          />
+          <div class="desc">
+            <h4>{{data.imageName}}</h4>
+            <p>{{ data.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
